@@ -33,6 +33,7 @@
             this.Btn_exit = new System.Windows.Forms.Button();
             this.Btn_inserisci = new System.Windows.Forms.Button();
             this.btn_modifica = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +89,22 @@
             this.btn_modifica.Text = "Modifica/Evadi";
             this.btn_modifica.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(590, 487);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 20);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 520);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_modifica);
             this.Controls.Add(this.Btn_inserisci);
             this.Controls.Add(this.Btn_exit);
@@ -113,5 +125,6 @@
         private System.Windows.Forms.Button Btn_exit;
         private System.Windows.Forms.Button Btn_inserisci;
         private System.Windows.Forms.Button btn_modifica;
+        private System.Windows.Forms.Button button1;
     }
 }

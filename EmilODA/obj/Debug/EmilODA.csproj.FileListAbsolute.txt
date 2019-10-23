@@ -1,6 +1,5 @@
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\bin\Debug\EmilODA.pdb
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\bin\Debug\IBM.Data.DB2.iSeries.dll
-C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.csprojAssemblyReference.cache
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.Form1.resources
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.csproj.GenerateResource.cache
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.csproj.CopyComplete
@@ -10,3 +9,7 @@ C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.exe
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.Properties.Resources.resources
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.SceltaFornitore.resources
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.Caricamento.resources
+C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.FrmStampa.resources

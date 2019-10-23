@@ -5,16 +5,29 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmilODA", "EmilODA\EmilODA.csproj", "{E02E0C5B-96A3-4C1B-BFEA-CC0A1534325B}"
 EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Prova report", "Prova report\Prova report.rptproj", "{9E395224-151E-4A0E-880E-1FC67834DFBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DebugLocal|Any CPU = DebugLocal|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E02E0C5B-96A3-4C1B-BFEA-CC0A1534325B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E02E0C5B-96A3-4C1B-BFEA-CC0A1534325B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02E0C5B-96A3-4C1B-BFEA-CC0A1534325B}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02E0C5B-96A3-4C1B-BFEA-CC0A1534325B}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
 		{E02E0C5B-96A3-4C1B-BFEA-CC0A1534325B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E02E0C5B-96A3-4C1B-BFEA-CC0A1534325B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E395224-151E-4A0E-880E-1FC67834DFBC}.Debug|Any CPU.ActiveCfg = Debug
+		{9E395224-151E-4A0E-880E-1FC67834DFBC}.Debug|Any CPU.Build.0 = Debug
+		{9E395224-151E-4A0E-880E-1FC67834DFBC}.Debug|Any CPU.Deploy.0 = Debug
+		{9E395224-151E-4A0E-880E-1FC67834DFBC}.DebugLocal|Any CPU.ActiveCfg = DebugLocal
+		{9E395224-151E-4A0E-880E-1FC67834DFBC}.DebugLocal|Any CPU.Build.0 = DebugLocal
+		{9E395224-151E-4A0E-880E-1FC67834DFBC}.Release|Any CPU.ActiveCfg = Release
+		{9E395224-151E-4A0E-880E-1FC67834DFBC}.Release|Any CPU.Build.0 = Release
+		{9E395224-151E-4A0E-880E-1FC67834DFBC}.Release|Any CPU.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
