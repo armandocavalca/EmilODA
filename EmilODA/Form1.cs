@@ -18,6 +18,7 @@ namespace EmilODA
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,6 +84,26 @@ namespace EmilODA
         {
             FrmStampa fsta = new FrmStampa();
             fsta.ShowDialog();
+        }
+
+        private void btn_modifica_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count>0)
+            {
+                var riga = dataGridView1.SelectedRows[0].Index;
+                
+                Dettaglio fdet = new Dettaglio(
+                    dataGridView1[3, riga].Value.ToString(),
+                    dataGridView1[2, riga].Value.ToString(),
+                    dataGridView1[1, riga].Value.ToString(),
+                    "");
+                fdet.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selezionare l'ordine da modificare");
+
+            }
         }
     }
 }

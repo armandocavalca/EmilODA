@@ -37,6 +37,8 @@
             this.DTP_Consegna = new System.Windows.Forms.DateTimePicker();
             this.Btn_exit = new System.Windows.Forms.Button();
             this.Btn_Avanti = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_ordine = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -117,12 +119,33 @@
             this.Btn_Avanti.TabIndex = 8;
             this.Btn_Avanti.Text = "Procedi";
             this.Btn_Avanti.UseVisualStyleBackColor = true;
+            this.Btn_Avanti.Click += new System.EventHandler(this.Btn_Avanti_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(257, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Ordine Numero:";
+            // 
+            // lbl_ordine
+            // 
+            this.lbl_ordine.AutoSize = true;
+            this.lbl_ordine.Location = new System.Drawing.Point(372, 129);
+            this.lbl_ordine.Name = "lbl_ordine";
+            this.lbl_ordine.Size = new System.Drawing.Size(109, 17);
+            this.lbl_ordine.TabIndex = 10;
+            this.lbl_ordine.Text = "Ordine Numero:";
             // 
             // SceltaFornitore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 186);
+            this.Controls.Add(this.lbl_ordine);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Btn_Avanti);
             this.Controls.Add(this.Btn_exit);
             this.Controls.Add(this.DTP_Consegna);
@@ -151,5 +174,7 @@
         private System.Windows.Forms.DateTimePicker DTP_Consegna;
         private System.Windows.Forms.Button Btn_exit;
         private System.Windows.Forms.Button Btn_Avanti;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_ordine;
     }
 }

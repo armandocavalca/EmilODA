@@ -88,6 +88,7 @@
             this.btn_modifica.TabIndex = 4;
             this.btn_modifica.Text = "Modifica/Evadi";
             this.btn_modifica.UseVisualStyleBackColor = true;
+            this.btn_modifica.Click += new System.EventHandler(this.btn_modifica_Click);
             // 
             // button1
             // 
