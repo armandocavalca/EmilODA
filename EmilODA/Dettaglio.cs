@@ -8,12 +8,20 @@ namespace EmilODA
 {
     public partial class Dettaglio : Form
     {
+        static string _n;
+        static string _f;
+        static string _do;
+        static string _dc;
         public Dettaglio(string fornitore, string dataordine, string numeroordine, string datarichiesta)
         {
             InitializeComponent();
             lbl_numero.Text = numeroordine;
             Lbl_Fornitore.Text = fornitore;
             Lbl_Data.Text = dataordine;
+            _n = numeroordine;
+            _f = fornitore;
+            _do = dataordine;
+            _dc = datarichiesta;
         }
 
         private void Btn_exit_Click(object sender, EventArgs e)
@@ -62,6 +70,44 @@ namespace EmilODA
         private void Dettaglio_Load(object sender, EventArgs e)
         {
             Ricarica();
+            Stato _stato= new Stato();
+            if (Program._Stato == _stato.Inserisci)
+            {
+                impostaarticolo();
+                //MessageBox.Show(_dc);
+                DTPRichiesta.Value = Convert.ToDateTime( _dc);
+            }
+        }
+        void impostaarticolo()
+        {
+            Caricamento carica = new Caricamento();
+            carica.Show();
+            Application.DoEvents();
+            iDB2Connection DBCONN = new iDB2Connection(Program.myConnString);
+
+            DBCONN.Open();
+
+            iDB2Command myCommand = new iDB2Command();
+
+            myCommand.Connection = DBCONN;
+
+            myCommand.CommandText = "SELECT ararti, ardsar" +
+                " FROM $emiedati.art00f a " +
+                " order by ardsar";
+
+            iDB2DataReader myReader = myCommand.ExecuteReader();
+
+            DataTable dt = new DataTable();
+
+            dt.Load(myReader);
+
+            CMB_Articolo.DataSource = dt;
+            CMB_Articolo.DisplayMember = "ardsar";
+            CMB_Articolo.ValueMember = "ararti";
+            carica.Close();
+            DBCONN.Close();
         }
     }
+
+        
 }

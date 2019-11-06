@@ -96,6 +96,7 @@ namespace EmilODA
         {
             if (Cmb_Fornitore.Text != "")
             {
+                Program._Stato = "I";
                 Dettaglio frmdt =
                    new Dettaglio(Cmb_Fornitore.Text,
                    DTP_Ordine.Value.ToString("dd/MM/yyyy"),
