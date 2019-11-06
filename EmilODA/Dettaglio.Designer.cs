@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.DTPRichiesta = new System.Windows.Forms.DateTimePicker();
             this.CMB_Articolo = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_qta = new System.Windows.Forms.TextBox();
             this.Btn_inserisci = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_dettaglio)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,7 @@
             this.DGV_dettaglio.RowTemplate.Height = 24;
             this.DGV_dettaglio.Size = new System.Drawing.Size(865, 372);
             this.DGV_dettaglio.TabIndex = 0;
+            this.DGV_dettaglio.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_dettaglio_CellClick);
             // 
             // Btn_exit
             // 
@@ -137,12 +138,12 @@
             this.CMB_Articolo.Size = new System.Drawing.Size(365, 24);
             this.CMB_Articolo.TabIndex = 11;
             // 
-            // textBox1
+            // txt_qta
             // 
-            this.textBox1.Location = new System.Drawing.Point(210, 540);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(362, 22);
-            this.textBox1.TabIndex = 12;
+            this.txt_qta.Location = new System.Drawing.Point(210, 540);
+            this.txt_qta.Name = "txt_qta";
+            this.txt_qta.Size = new System.Drawing.Size(362, 22);
+            this.txt_qta.TabIndex = 12;
             // 
             // Btn_inserisci
             // 
@@ -153,6 +154,7 @@
             this.Btn_inserisci.TabIndex = 13;
             this.Btn_inserisci.Text = "Inserisci";
             this.Btn_inserisci.UseVisualStyleBackColor = true;
+            this.Btn_inserisci.Click += new System.EventHandler(this.Btn_inserisci_Click);
             // 
             // Dettaglio
             // 
@@ -160,7 +162,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 630);
             this.Controls.Add(this.Btn_inserisci);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_qta);
             this.Controls.Add(this.CMB_Articolo);
             this.Controls.Add(this.DTPRichiesta);
             this.Controls.Add(this.label3);
@@ -192,7 +194,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker DTPRichiesta;
         private System.Windows.Forms.ComboBox CMB_Articolo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_qta;
         private System.Windows.Forms.Button Btn_inserisci;
     }
 }

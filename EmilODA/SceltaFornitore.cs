@@ -101,7 +101,8 @@ namespace EmilODA
                    new Dettaglio(Cmb_Fornitore.Text,
                    DTP_Ordine.Value.ToString("dd/MM/yyyy"),
                    lbl_ordine.Text,
-                   DTP_Consegna.Value.ToString());
+                   DTP_Consegna.Value.ToString(),
+                   lbl_Codice.Text);
                 frmdt.ShowDialog();
             }
         }

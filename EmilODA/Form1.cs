@@ -45,12 +45,12 @@ namespace EmilODA
                 "concat(concat(substring(o.dord, 7, 2), '/') , " +
                 "concat(concat(substring(o.dord, 5, 2) , '/') , " +
                 "substring(o.dord, 1, 4)))," +
-                " a.acrag1   " + 
+                " a.acrag1, o.cfor   " + 
                 " FROM $EMIEDATI.oda200f o " + 
                 " left join $d_emil.acf00f a " +
                 " on o.dtip = a.actpcd and o.cfor = a.acscon " +
                 " where o.qsta <> 'X'"+
-                " group by o.qsta,o.Nord,o.dord, a.acrag1"; 
+                " group by o.qsta,o.Nord,o.dord, a.acrag1, o.cfor"; 
 
             iDB2DataReader myReader = myCommand.ExecuteReader();
 
@@ -59,10 +59,11 @@ namespace EmilODA
             dt.Load(myReader);
 
             dataGridView1.DataSource = dt;
-                dataGridView1.Columns[0].HeaderText = "Stato";
+            dataGridView1.Columns[0].HeaderText = "Stato";
             dataGridView1.Columns[1].HeaderText = "Numero Ordine";
             dataGridView1.Columns[2].HeaderText = "Data Ordine";
             dataGridView1.Columns[3].HeaderText = "Fornitore";
+            dataGridView1.Columns[4].HeaderText = "Codice fornitore";
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
 
@@ -90,13 +91,15 @@ namespace EmilODA
         {
             if(dataGridView1.SelectedRows.Count>0)
             {
+                Program._Stato = "M";
+
                 var riga = dataGridView1.SelectedRows[0].Index;
                 
                 Dettaglio fdet = new Dettaglio(
                     dataGridView1[3, riga].Value.ToString(),
                     dataGridView1[2, riga].Value.ToString(),
                     dataGridView1[1, riga].Value.ToString(),
-                    "");
+                    "", dataGridView1[4, riga].Value.ToString());
                 fdet.ShowDialog();
             }
             else
