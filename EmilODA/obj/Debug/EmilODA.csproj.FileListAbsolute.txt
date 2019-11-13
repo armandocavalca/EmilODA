@@ -109,3 +109,4 @@ C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\bin\Debug\it\Microsoft.Visua
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\bin\Debug\it\Microsoft.VisualStudio.GraphModel.resources.dll
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.exe.config
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.Dettaglio.resources
+C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.csprojAssemblyReference.cache

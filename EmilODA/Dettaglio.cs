@@ -77,7 +77,34 @@ namespace EmilODA
             Ricarica();
             impostaarticolo();
 
-            Stato _stato= new Stato();
+            // carica combo tipo evasione
+            //CMB_tipoEvasione.Items.Insert(0,"Inserito");
+            //CMB_tipoEvasione.Items.Insert(1, "Evaso Parzialmente");
+            //CMB_tipoEvasione.Items.Insert(2, "Evaso Totalmente");
+            
+            DataTable workTable = new DataTable("Evasione");
+
+            DataColumn workCol = workTable.Columns.Add("Codice", typeof(String));
+            workTable.Columns.Add("Descrizione", typeof(String));
+            DataRow workRow = workTable.NewRow();
+            workRow[0] = "I";
+            workRow[1] = "Inserito (I)";
+            workTable.Rows.Add(workRow);
+            workRow = workTable.NewRow();
+            workRow[0] = "P";
+            workRow[1] = "Evaso Parzialmente (P)";
+            workTable.Rows.Add(workRow);
+            workRow = workTable.NewRow();
+            workRow[0] = "S";
+            workRow[1] = "Evaso Totalmente (S)";
+            workTable.Rows.Add(workRow);
+
+            CMB_tipoEvasione.DataSource = workTable;
+            CMB_tipoEvasione.ValueMember = "Codice";
+            CMB_tipoEvasione.DisplayMember = "Descrizione";
+
+
+            Stato _stato = new Stato();
             if (Program._Stato == _stato.Inserisci)
             {
                 DTPRichiesta.Value = Convert.ToDateTime( _dc);
@@ -95,9 +122,13 @@ namespace EmilODA
             label1.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
             DTPRichiesta.Visible = false;
             CMB_Articolo.Visible = false;
             txt_qta.Visible = false;
+            TxtQtaEvasione.Visible = false;
+            CMB_tipoEvasione.Visible = false;
         }
         void impostaarticolo()
         {
@@ -186,7 +217,9 @@ namespace EmilODA
                     " set  " +
                     " cart = '" + CMB_Articolo.SelectedValue + "',"+
                     " qord = " + Convert.ToDecimal(txt_qta.Text) + "," +
-                    " dric = " + DTPRichiesta.Value.ToString("yyyyMMdd") +
+                    " dric = " + DTPRichiesta.Value.ToString("yyyyMMdd") + ","+
+                    " qric = " + Convert.ToDecimal(TxtQtaEvasione.Text) + "," +
+                    " qsta = '" + CMB_tipoEvasione.SelectedValue + "'" +
                     " where nord = " + _n +
                     " and prog = "+ _r ;
 
@@ -204,14 +237,15 @@ namespace EmilODA
 
                 Ricarica();
 
+                StatoModifica();
 
-                Btn_inserisci.Enabled = false;
-                label1.Visible = false;
-                label2.Visible = false;
-                label3.Visible = false;
-                DTPRichiesta.Visible = false;
-                CMB_Articolo.Visible = false;
-                txt_qta.Visible = false;
+                //Btn_inserisci.Enabled = false;
+                //label1.Visible = false;
+                //label2.Visible = false;
+                //label3.Visible = false;
+                //DTPRichiesta.Visible = false;
+                //CMB_Articolo.Visible = false;
+                //txt_qta.Visible = false;
             }
         }
         private int PrimoNumeroLibero()
@@ -251,14 +285,20 @@ namespace EmilODA
             label1.Visible = true;
             label2.Visible = true;
             label3.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
             DTPRichiesta.Visible = true;
             CMB_Articolo.Visible = true;
             txt_qta.Visible = true;
+            TxtQtaEvasione.Visible = true;
+            CMB_tipoEvasione.Visible = true;
             var _riga = DGV_dettaglio.SelectedRows[0].Index;
             DTPRichiesta.Value = Convert.ToDateTime (DGV_dettaglio[5, _riga].Value);
             CMB_Articolo.Text = DGV_dettaglio[1, _riga].Value.ToString();
             txt_qta.Text = DGV_dettaglio[2, _riga].Value.ToString();
             _r = DGV_dettaglio[6, _riga].Value.ToString();
+            TxtQtaEvasione.Text= DGV_dettaglio[3    , _riga].Value.ToString();
+            CMB_tipoEvasione.SelectedValue= DGV_dettaglio[4, _riga].Value.ToString();
         }
     }
 

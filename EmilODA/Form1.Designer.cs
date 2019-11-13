@@ -51,6 +51,7 @@
             // 
             // Btn_ricarica
             // 
+            this.Btn_ricarica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn_ricarica.Location = new System.Drawing.Point(12, 463);
             this.Btn_ricarica.Name = "Btn_ricarica";
             this.Btn_ricarica.Size = new System.Drawing.Size(172, 45);
@@ -72,6 +73,7 @@
             // 
             // Btn_inserisci
             // 
+            this.Btn_inserisci.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn_inserisci.Location = new System.Drawing.Point(190, 463);
             this.Btn_inserisci.Name = "Btn_inserisci";
             this.Btn_inserisci.Size = new System.Drawing.Size(172, 45);
@@ -82,6 +84,7 @@
             // 
             // btn_modifica
             // 
+            this.btn_modifica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_modifica.Location = new System.Drawing.Point(368, 463);
             this.btn_modifica.Name = "btn_modifica";
             this.btn_modifica.Size = new System.Drawing.Size(172, 45);
@@ -92,6 +95,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.Location = new System.Drawing.Point(590, 487);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(27, 20);
