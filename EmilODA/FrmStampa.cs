@@ -1,5 +1,4 @@
-﻿using Microsoft.Reporting.WebForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,14 +15,6 @@ namespace EmilODA
         public FrmStampa()
         {
             InitializeComponent();
-        }
-
-        private void FrmStampa_Load(object sender, EventArgs e)
-        {
-            ReportViewer rv = new ReportViewer();
-            rv.LocalReport.ReportPath = Application.ExecutablePath + "RPT_oda.rdl";
-            
-            rv.LocalReport.Refresh();
         }
     }
 }

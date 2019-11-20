@@ -110,6 +110,7 @@ namespace EmilODA
             {
                 DTPRichiesta.Value = Convert.ToDateTime( _dc);
                 Btn_inserisci.Text = "Inserisci";
+                chkDel.Visible = false;
             }
             if(Program._Stato==_stato.Modifica)
             {
@@ -132,6 +133,7 @@ namespace EmilODA
             TxtQtaEvasione.Visible = false;
             CMB_tipoEvasione.Visible = false;
             txt_riga.Visible = false;
+            chkDel.Visible = false;
         }
         void impostaarticolo()
         {
@@ -222,6 +224,20 @@ namespace EmilODA
 
                 myCommand.Connection = DBCONN;
 
+                if(chkDel.Checked)
+                {
+                    if(MessageBox.Show("Confermi la cancellazione della riga?","Cancella Riga",MessageBoxButtons.YesNo)==DialogResult.No)
+                        return;
+                    else
+                    {
+                        myCommand.CommandText = "delete from " +
+                            " $emiedati.oda200f " +
+                            " where nord = " + _n +
+                            " and prog = " + _r;
+                    }
+
+                }
+                else
                 myCommand.CommandText = "update " +
                     " $emiedati.oda200f " +
                     " set  " +
@@ -305,6 +321,8 @@ namespace EmilODA
             TxtQtaEvasione.Visible = true;
             CMB_tipoEvasione.Visible = true;
             txt_riga.Visible = true;
+            chkDel.Visible = true;
+            chkDel.Checked = false;
             var _riga = DGV_dettaglio.SelectedRows[0].Index;
             DTPRichiesta.Value = Convert.ToDateTime (DGV_dettaglio[5, _riga].Value);
             CMB_Articolo.Text = DGV_dettaglio[1, _riga].Value.ToString();

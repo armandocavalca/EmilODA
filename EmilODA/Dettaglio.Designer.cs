@@ -49,6 +49,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_riga = new System.Windows.Forms.TextBox();
+            this.chkDel = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_dettaglio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -253,11 +254,22 @@
             this.txt_riga.Size = new System.Drawing.Size(120, 22);
             this.txt_riga.TabIndex = 22;
             // 
+            // chkDel
+            // 
+            this.chkDel.AutoSize = true;
+            this.chkDel.Location = new System.Drawing.Point(611, 711);
+            this.chkDel.Name = "chkDel";
+            this.chkDel.Size = new System.Drawing.Size(150, 21);
+            this.chkDel.TabIndex = 23;
+            this.chkDel.Text = "Riga da Cancellare";
+            this.chkDel.UseVisualStyleBackColor = true;
+            // 
             // Dettaglio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 823);
+            this.Controls.Add(this.chkDel);
             this.Controls.Add(this.txt_riga);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -311,5 +323,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_riga;
+        private System.Windows.Forms.CheckBox chkDel;
     }
 }
