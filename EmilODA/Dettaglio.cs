@@ -50,7 +50,8 @@ namespace EmilODA
                 " left join $EMIEDATI.art00f a " +
                 " on o.cart = a.ararti  " +
                 " where o.qsta <> 'X' " +
-                " and o.nord = " + lbl_numero.Text;
+                " and o.nord = " + lbl_numero.Text +
+                " order by prog";
 
             iDB2DataReader myReader = myCommand.ExecuteReader();
 
@@ -124,11 +125,13 @@ namespace EmilODA
             label3.Visible = false;
             label4.Visible = false;
             label5.Visible = false;
+            label9.Visible = false;
             DTPRichiesta.Visible = false;
             CMB_Articolo.Visible = false;
             txt_qta.Visible = false;
             TxtQtaEvasione.Visible = false;
             CMB_tipoEvasione.Visible = false;
+            txt_riga.Visible = false;
         }
         void impostaarticolo()
         {
@@ -178,7 +181,7 @@ namespace EmilODA
                     " (NORD,PROG,DORD,DTIP,CFOR,DRIC,CART,QORD,QRIC,QSTA) " +
                     " values(" +
                     _n + ","+
-                    (PrimoNumeroLibero()+1)  + "," +
+                    (PrimoNumeroLibero()+10)  + "," +
                     Convert.ToDateTime( _do).ToString("yyyyMMdd") + "," +
                     "'F','" +
                     _cf + "'," +
@@ -204,6 +207,13 @@ namespace EmilODA
             }
             if(Program._Stato==_stato.Modifica)
             {
+                if(txt_riga.Text!=_r)
+                if(ControllaDoppi())
+                {
+                    MessageBox.Show("Progressivo esiste già modificare progressivo");
+                    return;
+                }
+
                 iDB2Connection DBCONN = new iDB2Connection(Program.myConnString);
 
                 DBCONN.Open();
@@ -216,10 +226,11 @@ namespace EmilODA
                     " $emiedati.oda200f " +
                     " set  " +
                     " cart = '" + CMB_Articolo.SelectedValue + "',"+
-                    " qord = " + Convert.ToDecimal(txt_qta.Text) + "," +
+                    " qord = " + txt_qta.Text.Replace(",",".") + "," +
                     " dric = " + DTPRichiesta.Value.ToString("yyyyMMdd") + ","+
-                    " qric = " + Convert.ToDecimal(TxtQtaEvasione.Text) + "," +
-                    " qsta = '" + CMB_tipoEvasione.SelectedValue + "'" +
+                    " qric = " + TxtQtaEvasione.Text.Replace(",", ".") + "," +
+                    " qsta = '" + CMB_tipoEvasione.SelectedValue + "'," +
+                    " prog = " + Convert.ToDecimal(txt_riga.Text) + 
                     " where nord = " + _n +
                     " and prog = "+ _r ;
 
@@ -287,11 +298,13 @@ namespace EmilODA
             label3.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
+            label9.Visible = true;
             DTPRichiesta.Visible = true;
             CMB_Articolo.Visible = true;
             txt_qta.Visible = true;
             TxtQtaEvasione.Visible = true;
             CMB_tipoEvasione.Visible = true;
+            txt_riga.Visible = true;
             var _riga = DGV_dettaglio.SelectedRows[0].Index;
             DTPRichiesta.Value = Convert.ToDateTime (DGV_dettaglio[5, _riga].Value);
             CMB_Articolo.Text = DGV_dettaglio[1, _riga].Value.ToString();
@@ -299,6 +312,38 @@ namespace EmilODA
             _r = DGV_dettaglio[6, _riga].Value.ToString();
             TxtQtaEvasione.Text= DGV_dettaglio[3    , _riga].Value.ToString();
             CMB_tipoEvasione.SelectedValue= DGV_dettaglio[4, _riga].Value.ToString();
+            txt_riga.Text = DGV_dettaglio[6, _riga].Value.ToString();
+        }
+        private bool ControllaDoppi()
+        {
+
+            iDB2Connection DBCONN = new iDB2Connection(Program.myConnString);
+
+            DBCONN.Open();
+
+            iDB2Command myCommand = new iDB2Command();
+
+            myCommand.Connection = DBCONN;
+
+            myCommand.CommandText = "SELECT *" +
+                " FROM $emiedati.oda200f a " +
+                " where NORD = " + _n +
+                " and prog = " + txt_riga.Text;
+
+            iDB2DataReader myReader = myCommand.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(myReader);
+
+            bool _conta = true;
+            if (dt.Rows.Count > 0)
+                _conta = true;
+            else
+                _conta = false;
+
+            DBCONN.Close();
+
+            return _conta;
         }
     }
 

@@ -108,5 +108,50 @@ namespace EmilODA
 
             }
         }
+
+        private void btn_cancella_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                Program._Stato = "M";
+
+                var riga = dataGridView1.SelectedRows[0].Index;
+
+                var _risposta = MessageBox.Show("Conferma Cancellazione Ordine n."+
+                    dataGridView1[1, riga].Value.ToString() + Environment.NewLine +
+                    " Del " + dataGridView1[2, riga].Value.ToString() +Environment.NewLine +
+                    " Di "+ dataGridView1[3, riga].Value.ToString(),"Cancellazione Ordine",MessageBoxButtons.YesNo);
+
+                if(_risposta==DialogResult.Yes)
+                {
+                    iDB2Connection DBCONN = new iDB2Connection(Program.myConnString);
+
+                    DBCONN.Open();
+
+                    iDB2Command myCommand = new iDB2Command();
+
+                    myCommand.Connection = DBCONN;
+
+                    myCommand.CommandText = "delete from " +
+                        " $emiedati.oda200f " +
+                        " where nord = " + dataGridView1[1, riga].Value.ToString() ;
+
+                    try
+                    {
+                        myCommand.ExecuteNonQuery();
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message);
+                    }
+                    Ricarica();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selezionare l'ordine da cancellare");
+
+            }
+        }
     }
 }
