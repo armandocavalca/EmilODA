@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.EmilODA.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ODA201LTableAdapter" GeneratorDataComponentClassName="ODA201LTableAdapter" Name="ODA201L" UserDataComponentName="ODA201LTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "NORD", "PROG", "DORD", "DTIP", "CFOR", "DRIC", "CART", "QORD", "QRIC", "QSTA" FROM "$EMIEDATI"."ODA201L"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NORD" DataSetColumn="NORD" />
+              <Mapping SourceColumn="PROG" DataSetColumn="PROG" />
+              <Mapping SourceColumn="DORD" DataSetColumn="DORD" />
+              <Mapping SourceColumn="DTIP" DataSetColumn="DTIP" />
+              <Mapping SourceColumn="CFOR" DataSetColumn="CFOR" />
+              <Mapping SourceColumn="DRIC" DataSetColumn="DRIC" />
+              <Mapping SourceColumn="CART" DataSetColumn="CART" />
+              <Mapping SourceColumn="QORD" DataSetColumn="QORD" />
+              <Mapping SourceColumn="QRIC" DataSetColumn="QRIC" />
+              <Mapping SourceColumn="QSTA" DataSetColumn="QSTA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ODA201L" msprop:Generator_TableClassName="ODA201LDataTable" msprop:Generator_TableVarName="tableODA201L" msprop:Generator_TablePropName="ODA201L" msprop:Generator_RowDeletingName="ODA201LRowDeleting" msprop:Generator_RowChangingName="ODA201LRowChanging" msprop:Generator_RowEvHandlerName="ODA201LRowChangeEventHandler" msprop:Generator_RowDeletedName="ODA201LRowDeleted" msprop:Generator_UserTableName="ODA201L" msprop:Generator_RowChangedName="ODA201LRowChanged" msprop:Generator_RowEvArgName="ODA201LRowChangeEvent" msprop:Generator_RowClassName="ODA201LRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NORD" msprop:Generator_ColumnVarNameInTable="columnNORD" msprop:Generator_ColumnPropNameInRow="NORD" msprop:Generator_ColumnPropNameInTable="NORDColumn" msprop:Generator_UserColumnName="NORD" type="xs:decimal" />
+              <xs:element name="PROG" msprop:Generator_ColumnVarNameInTable="columnPROG" msprop:Generator_ColumnPropNameInRow="PROG" msprop:Generator_ColumnPropNameInTable="PROGColumn" msprop:Generator_UserColumnName="PROG" type="xs:decimal" />
+              <xs:element name="DORD" msprop:Generator_ColumnVarNameInTable="columnDORD" msprop:Generator_ColumnPropNameInRow="DORD" msprop:Generator_ColumnPropNameInTable="DORDColumn" msprop:Generator_UserColumnName="DORD" type="xs:decimal" />
+              <xs:element name="DTIP" msprop:Generator_ColumnVarNameInTable="columnDTIP" msprop:Generator_ColumnPropNameInRow="DTIP" msprop:Generator_ColumnPropNameInTable="DTIPColumn" msprop:Generator_UserColumnName="DTIP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CFOR" msprop:Generator_ColumnVarNameInTable="columnCFOR" msprop:Generator_ColumnPropNameInRow="CFOR" msprop:Generator_ColumnPropNameInTable="CFORColumn" msprop:Generator_UserColumnName="CFOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DRIC" msprop:Generator_ColumnVarNameInTable="columnDRIC" msprop:Generator_ColumnPropNameInRow="DRIC" msprop:Generator_ColumnPropNameInTable="DRICColumn" msprop:Generator_UserColumnName="DRIC" type="xs:decimal" />
+              <xs:element name="CART" msprop:Generator_ColumnVarNameInTable="columnCART" msprop:Generator_ColumnPropNameInRow="CART" msprop:Generator_ColumnPropNameInTable="CARTColumn" msprop:Generator_UserColumnName="CART">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QORD" msprop:Generator_ColumnVarNameInTable="columnQORD" msprop:Generator_ColumnPropNameInRow="QORD" msprop:Generator_ColumnPropNameInTable="QORDColumn" msprop:Generator_UserColumnName="QORD" type="xs:decimal" />
+              <xs:element name="QRIC" msprop:Generator_ColumnVarNameInTable="columnQRIC" msprop:Generator_ColumnPropNameInRow="QRIC" msprop:Generator_ColumnPropNameInTable="QRICColumn" msprop:Generator_UserColumnName="QRIC" type="xs:decimal" />
+              <xs:element name="QSTA" msprop:Generator_ColumnVarNameInTable="columnQSTA" msprop:Generator_ColumnPropNameInRow="QSTA" msprop:Generator_ColumnPropNameInTable="QSTAColumn" msprop:Generator_UserColumnName="QSTA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

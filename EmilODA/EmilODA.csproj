@@ -60,7 +60,7 @@
       <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -80,6 +80,21 @@
     </Compile>
     <Compile Include="Caricamento.Designer.cs">
       <DependentUpon>Caricamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dettaglio.cs">
       <SubType>Form</SubType>
@@ -105,6 +120,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="SceltaFornitore.cs">
       <SubType>Form</SubType>
@@ -132,13 +152,115 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="SceltaFornitore.resx">
       <DependentUpon>SceltaFornitore.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\EmilODA.DataSet1TableAdapters.ODA200FTableAdapter.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2BigInt.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Binary.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Blob.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Char.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2CharBitData.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Clob.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Command.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2CommandBuilder.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2CommErrorException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Connection.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2ConnectionFailedException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2ConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2ConnectionTimeoutException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2ConversionException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2DataAdapter.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2DataLink.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2DataReader.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2DataSourceEnumerator.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Date.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2DbClob.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2DCFunctionErrorException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2DecFloat16.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2DecFloat34.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Decimal.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Double.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Error.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2ErrorCollection.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Exception.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2ExitProgramErrorException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Factory.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Graphic.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2HostErrorException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Integer.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2InvalidConnectionStringException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2MaximumPoolSizeExceededException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2MetaDataCollectionNames.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2NullValueException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Numeric.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Parameter.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2ParameterCollection.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Permission.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2PermissionAttribute.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2ProviderSettings.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Real.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Rowid.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2RowUpdatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2RowUpdatedEventHandler.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2RowUpdatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2RowUpdatingEventHandler.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2SmallInt.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2SQLErrorException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2SQLParameterErrorException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Time.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2TimeStamp.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Trace.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2Transaction.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2TransactionFailedException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2UnsupportedHostVersionException.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2VarBinary.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2VarChar.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2VarCharBitData.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.iDB2VarGraphic.datasource" />
+    <None Include="Properties\DataSources\IBM.Data.DB2.iSeries.IiDB2Nullable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
@@ -154,6 +276,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

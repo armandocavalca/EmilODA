@@ -83,6 +83,33 @@ namespace EmilODA
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            // svuota file di passaggio
+            iDB2Connection DBCONN = new iDB2Connection(Program.myConnString);
+
+            DBCONN.Open();
+
+            iDB2Command myCommand = new iDB2Command();
+
+            myCommand.Connection = DBCONN;
+
+            myCommand.CommandText = "delete from ODA201P " ;
+            myCommand.ExecuteNonQuery();
+
+            for (int i=0; i < dataGridView1.Rows.Count;i++)
+            {
+                if (dataGridView1.Rows[i].Cells[3].Value != null)
+                {
+                    myCommand.CommandText = "insert into ODA201P " +
+                        " values('" + dataGridView1.Rows[i].Cells[0].Value.ToString() + "'," +
+                        dataGridView1.Rows[i].Cells[1].Value.ToString() + "," +
+                        "'" + dataGridView1.Rows[i].Cells[2].Value.ToString() + "'," +
+                        "'" + dataGridView1.Rows[i].Cells[3].Value.ToString() + "'," +
+                        "'" + dataGridView1.Rows[i].Cells[4].Value.ToString() + "')";
+                    myCommand.ExecuteNonQuery();
+                    //MessageBox.Show(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                }
+            }
+
             FrmStampa fsta = new FrmStampa();
             fsta.ShowDialog();
         }
