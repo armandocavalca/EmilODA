@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet4" targetNamespace="http://tempuri.org/DataSet4.xsd" xmlns:mstns="http://tempuri.org/DataSet4.xsd" xmlns="http://tempuri.org/DataSet4.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.EmilODA.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ODA202PTableAdapter" GeneratorDataComponentClassName="ODA202PTableAdapter" Name="ODA202P" UserDataComponentName="ODA202PTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="S061CA4T.ODA202P" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO "$EMIEDATI"."ODA202P" DEFAULT VALUES</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "NORD", "PROG", "DORD", "DTIP", "CFOR", "ACRAG1", "ACRAG2", "ACVIA", "ACCAP", "ACCIT", "ACPROV", "DRIC", "CART", "ARDSAR", "ARUNMI", "QORD", "QRIC", "QSTA" FROM "$EMIEDATI"."ODA202P"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NORD" DataSetColumn="NORD" />
+              <Mapping SourceColumn="PROG" DataSetColumn="PROG" />
+              <Mapping SourceColumn="DORD" DataSetColumn="DORD" />
+              <Mapping SourceColumn="DTIP" DataSetColumn="DTIP" />
+              <Mapping SourceColumn="CFOR" DataSetColumn="CFOR" />
+              <Mapping SourceColumn="ACRAG1" DataSetColumn="ACRAG1" />
+              <Mapping SourceColumn="ACRAG2" DataSetColumn="ACRAG2" />
+              <Mapping SourceColumn="ACVIA" DataSetColumn="ACVIA" />
+              <Mapping SourceColumn="ACCAP" DataSetColumn="ACCAP" />
+              <Mapping SourceColumn="ACCIT" DataSetColumn="ACCIT" />
+              <Mapping SourceColumn="ACPROV" DataSetColumn="ACPROV" />
+              <Mapping SourceColumn="DRIC" DataSetColumn="DRIC" />
+              <Mapping SourceColumn="CART" DataSetColumn="CART" />
+              <Mapping SourceColumn="ARDSAR" DataSetColumn="ARDSAR" />
+              <Mapping SourceColumn="ARUNMI" DataSetColumn="ARUNMI" />
+              <Mapping SourceColumn="QORD" DataSetColumn="QORD" />
+              <Mapping SourceColumn="QRIC" DataSetColumn="QRIC" />
+              <Mapping SourceColumn="QSTA" DataSetColumn="QSTA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet4" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet4" msprop:Generator_UserDSName="DataSet4">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ODA202P" msprop:Generator_TableClassName="ODA202PDataTable" msprop:Generator_TableVarName="tableODA202P" msprop:Generator_TablePropName="ODA202P" msprop:Generator_RowDeletingName="ODA202PRowDeleting" msprop:Generator_RowChangingName="ODA202PRowChanging" msprop:Generator_RowEvHandlerName="ODA202PRowChangeEventHandler" msprop:Generator_RowDeletedName="ODA202PRowDeleted" msprop:Generator_UserTableName="ODA202P" msprop:Generator_RowChangedName="ODA202PRowChanged" msprop:Generator_RowEvArgName="ODA202PRowChangeEvent" msprop:Generator_RowClassName="ODA202PRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NORD" msprop:Generator_ColumnVarNameInTable="columnNORD" msprop:Generator_ColumnPropNameInRow="NORD" msprop:Generator_ColumnPropNameInTable="NORDColumn" msprop:Generator_UserColumnName="NORD" type="xs:decimal" />
+              <xs:element name="PROG" msprop:Generator_ColumnVarNameInTable="columnPROG" msprop:Generator_ColumnPropNameInRow="PROG" msprop:Generator_ColumnPropNameInTable="PROGColumn" msprop:Generator_UserColumnName="PROG" type="xs:decimal" />
+              <xs:element name="DORD" msprop:Generator_ColumnVarNameInTable="columnDORD" msprop:Generator_ColumnPropNameInRow="DORD" msprop:Generator_ColumnPropNameInTable="DORDColumn" msprop:Generator_UserColumnName="DORD" type="xs:decimal" />
+              <xs:element name="DTIP" msprop:Generator_ColumnVarNameInTable="columnDTIP" msprop:Generator_ColumnPropNameInRow="DTIP" msprop:Generator_ColumnPropNameInTable="DTIPColumn" msprop:Generator_UserColumnName="DTIP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CFOR" msprop:Generator_ColumnVarNameInTable="columnCFOR" msprop:Generator_ColumnPropNameInRow="CFOR" msprop:Generator_ColumnPropNameInTable="CFORColumn" msprop:Generator_UserColumnName="CFOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACRAG1" msprop:Generator_ColumnVarNameInTable="columnACRAG1" msprop:Generator_ColumnPropNameInRow="ACRAG1" msprop:Generator_ColumnPropNameInTable="ACRAG1Column" msprop:Generator_UserColumnName="ACRAG1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACRAG2" msprop:Generator_ColumnVarNameInTable="columnACRAG2" msprop:Generator_ColumnPropNameInRow="ACRAG2" msprop:Generator_ColumnPropNameInTable="ACRAG2Column" msprop:Generator_UserColumnName="ACRAG2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACVIA" msprop:Generator_ColumnVarNameInTable="columnACVIA" msprop:Generator_ColumnPropNameInRow="ACVIA" msprop:Generator_ColumnPropNameInTable="ACVIAColumn" msprop:Generator_UserColumnName="ACVIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACCAP" msprop:Generator_ColumnVarNameInTable="columnACCAP" msprop:Generator_ColumnPropNameInRow="ACCAP" msprop:Generator_ColumnPropNameInTable="ACCAPColumn" msprop:Generator_UserColumnName="ACCAP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACCIT" msprop:Generator_ColumnVarNameInTable="columnACCIT" msprop:Generator_ColumnPropNameInRow="ACCIT" msprop:Generator_ColumnPropNameInTable="ACCITColumn" msprop:Generator_UserColumnName="ACCIT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACPROV" msprop:Generator_ColumnVarNameInTable="columnACPROV" msprop:Generator_ColumnPropNameInRow="ACPROV" msprop:Generator_ColumnPropNameInTable="ACPROVColumn" msprop:Generator_UserColumnName="ACPROV">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DRIC" msprop:Generator_ColumnVarNameInTable="columnDRIC" msprop:Generator_ColumnPropNameInRow="DRIC" msprop:Generator_ColumnPropNameInTable="DRICColumn" msprop:Generator_UserColumnName="DRIC" type="xs:decimal" />
+              <xs:element name="CART" msprop:Generator_ColumnVarNameInTable="columnCART" msprop:Generator_ColumnPropNameInRow="CART" msprop:Generator_ColumnPropNameInTable="CARTColumn" msprop:Generator_UserColumnName="CART">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARDSAR" msprop:Generator_ColumnVarNameInTable="columnARDSAR" msprop:Generator_ColumnPropNameInRow="ARDSAR" msprop:Generator_ColumnPropNameInTable="ARDSARColumn" msprop:Generator_UserColumnName="ARDSAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARUNMI" msprop:Generator_ColumnVarNameInTable="columnARUNMI" msprop:Generator_ColumnPropNameInRow="ARUNMI" msprop:Generator_ColumnPropNameInTable="ARUNMIColumn" msprop:Generator_UserColumnName="ARUNMI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QORD" msprop:Generator_ColumnVarNameInTable="columnQORD" msprop:Generator_ColumnPropNameInRow="QORD" msprop:Generator_ColumnPropNameInTable="QORDColumn" msprop:Generator_UserColumnName="QORD" type="xs:decimal" />
+              <xs:element name="QRIC" msprop:Generator_ColumnVarNameInTable="columnQRIC" msprop:Generator_ColumnPropNameInRow="QRIC" msprop:Generator_ColumnPropNameInTable="QRICColumn" msprop:Generator_UserColumnName="QRIC" type="xs:decimal" />
+              <xs:element name="QSTA" msprop:Generator_ColumnVarNameInTable="columnQSTA" msprop:Generator_ColumnPropNameInRow="QSTA" msprop:Generator_ColumnPropNameInTable="QSTAColumn" msprop:Generator_UserColumnName="QSTA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

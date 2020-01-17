@@ -58,3 +58,4 @@ C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\bin\Debug\it\Microsoft.Windo
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\bin\Debug\it\Microsoft.Windows.Design.Extensibility.resources.dll
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.exe.config
 C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.FrmStampa.resources
+C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\obj\Debug\EmilODA.Frm_ModuloOdf.resources

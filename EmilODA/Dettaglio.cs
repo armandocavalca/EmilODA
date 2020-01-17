@@ -363,6 +363,13 @@ namespace EmilODA
 
             return _conta;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_ModuloOdf Podf = new Frm_ModuloOdf();
+            Podf.WindowState = FormWindowState.Maximized;
+            Podf.ShowDialog();
+        }
     }
 
         

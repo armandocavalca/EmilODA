@@ -50,6 +50,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txt_riga = new System.Windows.Forms.TextBox();
             this.chkDel = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_dettaglio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -264,11 +265,23 @@
             this.chkDel.Text = "Riga da Cancellare";
             this.chkDel.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(608, 766);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 45);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Stampa";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Dettaglio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 823);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.chkDel);
             this.Controls.Add(this.txt_riga);
             this.Controls.Add(this.label9);
@@ -324,5 +337,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_riga;
         private System.Windows.Forms.CheckBox chkDel;
+        private System.Windows.Forms.Button button1;
     }
 }
