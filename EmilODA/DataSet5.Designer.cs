@@ -20,9 +20,9 @@ namespace EmilODA {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet4")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSet5")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet4 : global::System.Data.DataSet {
+    public partial class DataSet5 : global::System.Data.DataSet {
         
         private ODA202PDataTable tableODA202P;
         
@@ -30,7 +30,7 @@ namespace EmilODA {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataSet4() {
+        public DataSet5() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EmilODA {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DataSet4(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSet5(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace EmilODA {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet4 cln = ((DataSet4)(base.Clone()));
+            DataSet5 cln = ((DataSet5)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace EmilODA {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet4";
+            this.DataSetName = "DataSet5";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet4.xsd";
+            this.Namespace = "http://tempuri.org/DataSet5.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableODA202P = new ODA202PDataTable();
@@ -225,7 +225,7 @@ namespace EmilODA {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet4 ds = new DataSet4();
+            DataSet5 ds = new DataSet5();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -652,6 +652,7 @@ namespace EmilODA {
                 this.columnNORD.AllowDBNull = false;
                 this.columnPROG.AllowDBNull = false;
                 this.columnDORD.AllowDBNull = false;
+                this.columnDORD.MaxLength = 8;
                 this.columnDTIP.AllowDBNull = false;
                 this.columnDTIP.MaxLength = 1;
                 this.columnCFOR.AllowDBNull = false;
@@ -669,6 +670,7 @@ namespace EmilODA {
                 this.columnACPROV.AllowDBNull = false;
                 this.columnACPROV.MaxLength = 2;
                 this.columnDRIC.AllowDBNull = false;
+                this.columnDRIC.MaxLength = 8;
                 this.columnCART.AllowDBNull = false;
                 this.columnCART.MaxLength = 9;
                 this.columnARDSAR.AllowDBNull = false;
@@ -746,7 +748,7 @@ namespace EmilODA {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet4 ds = new DataSet4();
+                DataSet5 ds = new DataSet5();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1053,7 +1055,7 @@ namespace EmilODA {
         }
     }
 }
-namespace EmilODA.DataSet4TableAdapters {
+namespace EmilODA.DataSet5TableAdapters {
     
     
     /// <summary>
@@ -1179,6 +1181,7 @@ namespace EmilODA.DataSet4TableAdapters {
             tableMapping.DataSetTable = "ODA202P";
             tableMapping.ColumnMappings.Add("NORD", "NORD");
             tableMapping.ColumnMappings.Add("PROG", "PROG");
+            tableMapping.ColumnMappings.Add("DORD", "DORD");
             tableMapping.ColumnMappings.Add("DTIP", "DTIP");
             tableMapping.ColumnMappings.Add("CFOR", "CFOR");
             tableMapping.ColumnMappings.Add("ACRAG1", "ACRAG1");
@@ -1187,15 +1190,18 @@ namespace EmilODA.DataSet4TableAdapters {
             tableMapping.ColumnMappings.Add("ACCAP", "ACCAP");
             tableMapping.ColumnMappings.Add("ACCIT", "ACCIT");
             tableMapping.ColumnMappings.Add("ACPROV", "ACPROV");
+            tableMapping.ColumnMappings.Add("DRIC", "DRIC");
             tableMapping.ColumnMappings.Add("CART", "CART");
             tableMapping.ColumnMappings.Add("ARDSAR", "ARDSAR");
             tableMapping.ColumnMappings.Add("ARUNMI", "ARUNMI");
             tableMapping.ColumnMappings.Add("QORD", "QORD");
             tableMapping.ColumnMappings.Add("QRIC", "QRIC");
             tableMapping.ColumnMappings.Add("QSTA", "QSTA");
-            tableMapping.ColumnMappings.Add("DRIC", "DRIC");
-            tableMapping.ColumnMappings.Add("DORD", "DORD");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"$EMIEDATI\".\"ODA202P\" DEFAULT VALUES";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1211,8 +1217,9 @@ namespace EmilODA.DataSet4TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NORD, PROG, DTIP, CFOR, ACRAG1, ACRAG2, ACVIA, ACCAP, ACCIT, ACPROV, CART," +
-                " ARDSAR, ARUNMI, QORD, QRIC, QSTA, DRIC, DORD\r\nFROM     \"$EMIEDATI\".ODA202P";
+            this._commandCollection[0].CommandText = "SELECT \"NORD\", \"PROG\", \"DORD\", \"DTIP\", \"CFOR\", \"ACRAG1\", \"ACRAG2\", \"ACVIA\", \"ACCA" +
+                "P\", \"ACCIT\", \"ACPROV\", \"DRIC\", \"CART\", \"ARDSAR\", \"ARUNMI\", \"QORD\", \"QRIC\", \"QSTA" +
+                "\" FROM \"$EMIEDATI\".\"ODA202P\"";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1220,7 +1227,7 @@ namespace EmilODA.DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet4.ODA202PDataTable dataTable) {
+        public virtual int Fill(DataSet5.ODA202PDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1233,11 +1240,61 @@ namespace EmilODA.DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet4.ODA202PDataTable GetData() {
+        public virtual DataSet5.ODA202PDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet4.ODA202PDataTable dataTable = new DataSet4.ODA202PDataTable();
+            DataSet5.ODA202PDataTable dataTable = new DataSet5.ODA202PDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet5.ODA202PDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet5 dataSet) {
+            return this.Adapter.Update(dataSet, "ODA202P");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert() {
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
         }
     }
     
@@ -1253,6 +1310,8 @@ namespace EmilODA.DataSet4TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
+        private ODA202PTableAdapter _oDA202PTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -1265,6 +1324,20 @@ namespace EmilODA.DataSet4TableAdapters {
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public ODA202PTableAdapter ODA202PTableAdapter {
+            get {
+                return this._oDA202PTableAdapter;
+            }
+            set {
+                this._oDA202PTableAdapter = value;
             }
         }
         
@@ -1287,6 +1360,10 @@ namespace EmilODA.DataSet4TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._oDA202PTableAdapter != null) 
+                            && (this._oDA202PTableAdapter.Connection != null))) {
+                    return this._oDA202PTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -1300,6 +1377,9 @@ namespace EmilODA.DataSet4TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._oDA202PTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -1309,8 +1389,17 @@ namespace EmilODA.DataSet4TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._oDA202PTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ODA202P.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._oDA202PTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -1319,8 +1408,16 @@ namespace EmilODA.DataSet4TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._oDA202PTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ODA202P.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._oDA202PTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -1329,8 +1426,16 @@ namespace EmilODA.DataSet4TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._oDA202PTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ODA202P.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._oDA202PTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -1363,12 +1468,17 @@ namespace EmilODA.DataSet4TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DataSet4 dataSet) {
+        public virtual int UpdateAll(DataSet5 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
+            }
+            if (((this._oDA202PTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._oDA202PTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
+                        "a stessa stringa di connessione.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -1403,6 +1513,15 @@ namespace EmilODA.DataSet4TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._oDA202PTableAdapter != null)) {
+                    revertConnections.Add(this._oDA202PTableAdapter, this._oDA202PTableAdapter.Connection);
+                    this._oDA202PTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(workConnection));
+                    this._oDA202PTableAdapter.Transaction = ((global::System.Data.Odbc.OdbcTransaction)(workTransaction));
+                    if (this._oDA202PTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._oDA202PTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._oDA202PTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -1460,6 +1579,10 @@ namespace EmilODA.DataSet4TableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._oDA202PTableAdapter != null)) {
+                    this._oDA202PTableAdapter.Connection = ((global::System.Data.Odbc.OdbcConnection)(revertConnections[this._oDA202PTableAdapter]));
+                    this._oDA202PTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

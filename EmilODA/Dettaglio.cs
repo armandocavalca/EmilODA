@@ -366,6 +366,65 @@ namespace EmilODA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // svuota file di passaggio
+            iDB2Connection DBCONN = new iDB2Connection(Program.myConnString);
+
+            DBCONN.Open();
+
+            iDB2Command myCommand = new iDB2Command();
+
+            myCommand.Connection = DBCONN;
+
+            myCommand.CommandText = "delete from ODA202P ";
+            myCommand.ExecuteNonQuery();
+
+            myCommand.CommandText = "SELECT ACRAG1, ACRAG2, ACVIA, ACCAP, ACCITT, ACPROV " + 
+                "FROM $d_emil.acf00f " +
+                " WHERE ACTPCD = 'F' and ACSCON = '" + _cf + "'";
+            iDB2DataReader myReader = myCommand.ExecuteReader();
+
+            DataTable dt = new DataTable();
+
+            dt.Load(myReader);
+
+            string _rg1="";
+            string _rg2 = "";
+            string _via = "";
+            string _cap = "";
+            string _cit = "";
+            string _prov = "";
+            foreach (DataRow r in dt.Rows)
+            {
+               _rg1= r[0].ToString().Replace("'","''");
+                _rg2 = r[1].ToString().Replace("'","''");
+                _via = r[2].ToString().Replace("'", "''");
+                _cap = r[3].ToString().Substring(0,5).Replace("'", "''");
+                _cit = r[4].ToString().Replace("'", "''");
+                _prov = r[5].ToString().Substring(0,2).Replace("'", "''");
+            }
+
+            for (int i = 0; i <  DGV_dettaglio.Rows.Count; i++)
+            {
+                if (DGV_dettaglio.Rows[i].Cells[3].Value != null)
+                {
+                    myCommand.CommandText = "insert into ODA202P " +
+                        "(NORD,PROG, DORD, DTIP, CFOR, ACRAG1," +
+                        "ACRAG2, ACVIA, ACCAP, ACCIT, ACPROV, DRIC,CART," +
+                        "ARDSAR, ARUNMI, QORD)  " +
+                        " values('" + _n +"','" +
+                        DGV_dettaglio.Rows[i].Cells[6].Value.ToString() + "','" +
+                        _do.Replace("/","") + "','F'," +"'"+ _cf+"','" + _f + 
+                        "','" + _rg2 +"','" + _via +"','" + _cap +"','" + _cit + "','" + _prov +"','" + 
+                        DGV_dettaglio.Rows[i].Cells[5].Value.ToString().Replace("/","") + "'," +
+                        "'" + DGV_dettaglio.Rows[i].Cells[0].Value.ToString() + "'," +
+                        "'" + DGV_dettaglio.Rows[i].Cells[1].Value.ToString() + "'," +
+                        "'Nr','" +
+                        DGV_dettaglio.Rows[i].Cells[2].Value.ToString().Replace(",",".") + "')";
+                    myCommand.ExecuteNonQuery();
+                    //MessageBox.Show(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                }
+            }
+
             Frm_ModuloOdf Podf = new Frm_ModuloOdf();
             Podf.WindowState = FormWindowState.Maximized;
             Podf.ShowDialog();

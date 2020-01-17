@@ -6,19 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.58373cm</Width>
+              <Width>1.7329cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.58373cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.18723cm</Width>
+              <Width>8.3039cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.97507cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.58373cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.58373cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -34,7 +37,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>PROG</Value>
+                              <Value>Riga</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -64,7 +67,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CART</Value>
+                              <Value>Codice</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -94,7 +97,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ARDSAR</Value>
+                              <Value>Descrizione</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -124,7 +127,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ARUNMI</Value>
+                              <Value>UM</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -154,7 +157,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>QORD</Value>
+                              <Value>Quantità</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -162,6 +165,36 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox15</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox21">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Data Richiesta</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox21</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -208,6 +241,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -330,12 +364,45 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox22">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!DRIC.Value.ToString().Substring(0,2) &amp; "/" &amp;
+Fields!DRIC.Value.ToString().Substring(2,2) &amp; "/" &amp;
+Fields!DRIC.Value.ToString().Substring(4,4)</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox22</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
+            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -357,7 +424,7 @@
         <Top>0.37253cm</Top>
         <Left>0.30903cm</Left>
         <Height>1.2cm</Height>
-        <Width>20.52217cm</Width>
+        <Width>21.67933cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -365,7 +432,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.96667in</Height>
+    <Height>0.95834in</Height>
     <Style />
   </Body>
   <Width>8.72258in</Width>
@@ -591,7 +658,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>="Numero Ordine: " &amp; First(Fields!NORD.Value, "DataSet1") &amp; " Del " &amp; First(Fields!DORD.Value, "DataSet1")</Value>
+                  <Value>="Numero Ordine: " &amp; First(Fields!NORD.Value, "DataSet1") &amp; " Del " 
+&amp; First(Fields!DORD.Value.ToString().Substring(0,2), "DataSet1") &amp; "/" 
+&amp; First(Fields!DORD.Value.ToString().Substring(2,2), "DataSet1") &amp; "/" 
+&amp; First(Fields!DORD.Value.ToString().Substring(4,4), "DataSet1")</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -788,7 +858,7 @@
         </Field>
         <Field Name="DORD">
           <DataField>DORD</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="DTIP">
           <DataField>DTIP</DataField>
@@ -824,7 +894,7 @@
         </Field>
         <Field Name="DRIC">
           <DataField>DRIC</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="CART">
           <DataField>CART</DataField>
@@ -852,8 +922,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DataSet4</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\DataSet4.xsd</rd:SchemaPath>
+        <rd:DataSetName>DataSet5</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\arman_xcjjj0z\source\repos\EmilODA\EmilODA\DataSet5.xsd</rd:SchemaPath>
         <rd:TableName>ODA202P</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

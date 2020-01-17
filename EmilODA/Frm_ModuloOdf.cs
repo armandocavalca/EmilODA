@@ -19,6 +19,8 @@ namespace EmilODA
 
         private void Frm_ModuloOdf_Load(object sender, EventArgs e)
         {
+            // TODO: questa riga di codice carica i dati nella tabella 'dataSet41.ODA202P'. È possibile spostarla o rimuoverla se necessario.
+            this.ODA202PTableAdapter.Fill(this.dataSet41.ODA202P);
             // TODO: questa riga di codice carica i dati nella tabella 'DataSet4.ODA202P'. È possibile spostarla o rimuoverla se necessario.
             this.ODA202PTableAdapter.Fill(this.DataSet4.ODA202P);
 

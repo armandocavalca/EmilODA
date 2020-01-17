@@ -30,13 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSet4 = new EmilODA.DataSet4();
             this.ODA202PBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet4 = new EmilODA.DataSet4();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ODA202PTableAdapter = new EmilODA.DataSet4TableAdapters.ODA202PTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet4)).BeginInit();
+            this.dataSet41 = new EmilODA.DataSet4();
+            this.oDA202PBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ODA202PBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oDA202PBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ODA202PBindingSource
+            // 
+            this.ODA202PBindingSource.DataMember = "ODA202P";
+            this.ODA202PBindingSource.DataSource = this.DataSet4;
+            // 
+            // DataSet4
+            // 
+            this.DataSet4.DataSetName = "DataSet4";
+            this.DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -44,7 +58,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.ODA202PBindingSource;
+            reportDataSource1.Value = this.oDA202PBindingSource1;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "EmilODA.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
@@ -52,19 +66,19 @@
             this.reportViewer1.Size = new System.Drawing.Size(776, 386);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DataSet4
-            // 
-            this.DataSet4.DataSetName = "DataSet4";
-            this.DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ODA202PBindingSource
-            // 
-            this.ODA202PBindingSource.DataMember = "ODA202P";
-            this.ODA202PBindingSource.DataSource = this.DataSet4;
-            // 
             // ODA202PTableAdapter
             // 
             this.ODA202PTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataSet41
+            // 
+            this.dataSet41.DataSetName = "DataSet4";
+            this.dataSet41.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // oDA202PBindingSource1
+            // 
+            this.oDA202PBindingSource1.DataMember = "ODA202P";
+            this.oDA202PBindingSource1.DataSource = this.dataSet41;
             // 
             // Frm_ModuloOdf
             // 
@@ -75,8 +89,10 @@
             this.Name = "Frm_ModuloOdf";
             this.Text = "Frm_ModuloOdf";
             this.Load += new System.EventHandler(this.Frm_ModuloOdf_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ODA202PBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oDA202PBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,5 +103,7 @@
         private System.Windows.Forms.BindingSource ODA202PBindingSource;
         private DataSet4 DataSet4;
         private DataSet4TableAdapters.ODA202PTableAdapter ODA202PTableAdapter;
+        private DataSet4 dataSet41;
+        private System.Windows.Forms.BindingSource oDA202PBindingSource1;
     }
 }
