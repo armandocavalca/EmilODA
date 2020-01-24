@@ -42,7 +42,7 @@ namespace EmilODA
 
             myCommand.Connection = DBCONN;
 
-            myCommand.CommandText = "SELECT o.cart,a.ardsar,o.qord,o.qric, o.qsta, " +
+            myCommand.CommandText = "SELECT o.cart,a.ardsar,a.arunmi,o.qord,o.qric, o.qsta, " +
                 "concat(concat(substring(o.dric, 7, 2), '/') , " +
                 "concat(concat(substring(o.dric, 5, 2) , '/') , " +
                 "substring(o.dric, 1, 4))), prog" +
@@ -62,11 +62,12 @@ namespace EmilODA
             DGV_dettaglio.DataSource = dt;
             DGV_dettaglio.Columns[0].HeaderText = "Codice";
             DGV_dettaglio.Columns[1].HeaderText = "Descrizione";
-            DGV_dettaglio.Columns[2].HeaderText = "Q.tà Ordine";
-            DGV_dettaglio.Columns[3].HeaderText = "Q.tà Ricevuta";
-            DGV_dettaglio.Columns[4].HeaderText = "Stato";
-            DGV_dettaglio.Columns[5].HeaderText = "Data Richiesta";
-            DGV_dettaglio.Columns[6].HeaderText = "Numero Riga";
+            DGV_dettaglio.Columns[2].HeaderText = "UM";
+            DGV_dettaglio.Columns[3].HeaderText = "Q.tà Ordine";
+            DGV_dettaglio.Columns[4].HeaderText = "Q.tà Ricevuta";
+            DGV_dettaglio.Columns[5].HeaderText = "Stato";
+            DGV_dettaglio.Columns[6].HeaderText = "Data Richiesta";
+            DGV_dettaglio.Columns[7].HeaderText = "Numero Riga";
             for (int i = 0; i < DGV_dettaglio.Columns.Count; i++)
                 DGV_dettaglio.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
 
@@ -324,13 +325,13 @@ namespace EmilODA
             chkDel.Visible = true;
             chkDel.Checked = false;
             var _riga = DGV_dettaglio.SelectedRows[0].Index;
-            DTPRichiesta.Value = Convert.ToDateTime (DGV_dettaglio[5, _riga].Value);
+            DTPRichiesta.Value = Convert.ToDateTime (DGV_dettaglio[6, _riga].Value);
             CMB_Articolo.Text = DGV_dettaglio[1, _riga].Value.ToString();
-            txt_qta.Text = DGV_dettaglio[2, _riga].Value.ToString();
-            _r = DGV_dettaglio[6, _riga].Value.ToString();
-            TxtQtaEvasione.Text= DGV_dettaglio[3    , _riga].Value.ToString();
-            CMB_tipoEvasione.SelectedValue= DGV_dettaglio[4, _riga].Value.ToString();
-            txt_riga.Text = DGV_dettaglio[6, _riga].Value.ToString();
+            txt_qta.Text = DGV_dettaglio[3, _riga].Value.ToString();
+            _r = DGV_dettaglio[7, _riga].Value.ToString();
+            TxtQtaEvasione.Text= DGV_dettaglio[4    , _riga].Value.ToString();
+            CMB_tipoEvasione.SelectedValue= DGV_dettaglio[5, _riga].Value.ToString();
+            txt_riga.Text = DGV_dettaglio[7, _riga].Value.ToString();
         }
         private bool ControllaDoppi()
         {
@@ -412,14 +413,14 @@ namespace EmilODA
                         "ACRAG2, ACVIA, ACCAP, ACCIT, ACPROV, DRIC,CART," +
                         "ARDSAR, ARUNMI, QORD)  " +
                         " values('" + _n +"','" +
-                        DGV_dettaglio.Rows[i].Cells[6].Value.ToString() + "','" +
+                        DGV_dettaglio.Rows[i].Cells[7].Value.ToString() + "','" +
                         _do.Replace("/","") + "','F'," +"'"+ _cf+"','" + _f + 
                         "','" + _rg2 +"','" + _via +"','" + _cap +"','" + _cit + "','" + _prov +"','" + 
-                        DGV_dettaglio.Rows[i].Cells[5].Value.ToString().Replace("/","") + "'," +
+                        DGV_dettaglio.Rows[i].Cells[6].Value.ToString().Replace("/","") + "'," +
                         "'" + DGV_dettaglio.Rows[i].Cells[0].Value.ToString() + "'," +
                         "'" + DGV_dettaglio.Rows[i].Cells[1].Value.ToString() + "'," +
-                        "'Nr','" +
-                        DGV_dettaglio.Rows[i].Cells[2].Value.ToString().Replace(",",".") + "')";
+                        "'" + DGV_dettaglio.Rows[i].Cells[2].Value.ToString() + "','" +
+                        DGV_dettaglio.Rows[i].Cells[3].Value.ToString().Replace(",",".") + "')";
                     myCommand.ExecuteNonQuery();
                     //MessageBox.Show(dataGridView1.Rows[i].Cells[3].Value.ToString());
                 }

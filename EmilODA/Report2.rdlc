@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.7329cm</Width>
+              <Width>0.96944cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.58373cm</Width>
+              <Width>2.9896cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>8.3039cm</Width>
+              <Width>6.82137cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.97507cm</Width>
+              <Width>1.32123cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.58373cm</Width>
+              <Width>1.9742cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.0555cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -211,7 +211,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.78432cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -241,7 +241,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -423,8 +422,8 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.37253cm</Top>
         <Left>0.30903cm</Left>
-        <Height>1.2cm</Height>
-        <Width>21.67933cm</Width>
+        <Height>1.38432cm</Height>
+        <Width>16.13134cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -435,7 +434,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
     <Height>0.95834in</Height>
     <Style />
   </Body>
-  <Width>8.72258in</Width>
+  <Width>6.62258in</Width>
   <Page>
     <PageHeader>
       <Height>5.67267cm</Height>
@@ -458,7 +457,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
           <Top>0.22437cm</Top>
-          <Left>13.83453cm</Left>
+          <Left>9.70703cm</Left>
           <Height>0.6cm</Height>
           <Width>5.14583cm</Width>
           <Style>
@@ -487,7 +486,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
           <Top>1.00076cm</Top>
-          <Left>13.83453cm</Left>
+          <Left>9.70703cm</Left>
           <Height>0.6cm</Height>
           <Width>5.14583cm</Width>
           <ZIndex>1</ZIndex>
@@ -517,7 +516,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
           <Top>1.79889cm</Top>
-          <Left>13.83454cm</Left>
+          <Left>9.70704cm</Left>
           <Height>0.6cm</Height>
           <Width>5.14583cm</Width>
           <ZIndex>2</ZIndex>
@@ -547,7 +546,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>Textbox16</rd:DefaultName>
           <Top>0.22437cm</Top>
-          <Left>11.0617cm</Left>
+          <Left>6.9342cm</Left>
           <Height>0.6cm</Height>
           <Width>2.59644cm</Width>
           <ZIndex>3</ZIndex>
@@ -577,7 +576,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
           <Top>2.57528cm</Top>
-          <Left>11.0617cm</Left>
+          <Left>6.9342cm</Left>
           <Height>0.6cm</Height>
           <Width>2.59644cm</Width>
           <ZIndex>4</ZIndex>
@@ -607,7 +606,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
           <Top>2.57528cm</Top>
-          <Left>13.83453cm</Left>
+          <Left>9.70703cm</Left>
           <Height>0.6cm</Height>
           <Width>5.14583cm</Width>
           <ZIndex>5</ZIndex>
@@ -637,7 +636,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
           <Top>2.57528cm</Top>
-          <Left>19.12147cm</Left>
+          <Left>14.99397cm</Left>
           <Height>0.6cm</Height>
           <Width>1.26294cm</Width>
           <ZIndex>6</ZIndex>
@@ -703,8 +702,8 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           <Source>Embedded</Source>
           <Value>emidati</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.2667cm</Top>
-          <Left>2.3622cm</Left>
+          <Top>1.79889cm</Top>
+          <Left>0.30903cm</Left>
           <Height>1.33406cm</Height>
           <Width>5.86033cm</Width>
           <ZIndex>9</ZIndex>
@@ -742,7 +741,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Top>1.55787cm</Top>
-          <Left>15.86653cm</Left>
+          <Left>10.78653cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -771,7 +770,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
           <Top>1.55787cm</Top>
-          <Left>19.02037cm</Left>
+          <Left>13.94037cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>1</ZIndex>
@@ -801,7 +800,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
           <Top>1.55787cm</Top>
-          <Left>18.47237cm</Left>
+          <Left>13.39237cm</Left>
           <Height>0.47096cm</Height>
           <Width>0.25253cm</Width>
           <ZIndex>2</ZIndex>

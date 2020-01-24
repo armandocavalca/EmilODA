@@ -24,6 +24,7 @@ namespace EmilODA
             // TODO: questa riga di codice carica i dati nella tabella 'DataSet4.ODA202P'. È possibile spostarla o rimuoverla se necessario.
             this.ODA202PTableAdapter.Fill(this.DataSet4.ODA202P);
 
+           
             this.reportViewer1.RefreshReport();
         }
     }

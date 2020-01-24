@@ -64,14 +64,14 @@
             this.DGV_dettaglio.Name = "DGV_dettaglio";
             this.DGV_dettaglio.RowHeadersWidth = 51;
             this.DGV_dettaglio.RowTemplate.Height = 24;
-            this.DGV_dettaglio.Size = new System.Drawing.Size(865, 452);
+            this.DGV_dettaglio.Size = new System.Drawing.Size(965, 452);
             this.DGV_dettaglio.TabIndex = 0;
             this.DGV_dettaglio.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_dettaglio_CellClick);
             // 
             // Btn_exit
             // 
             this.Btn_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_exit.Location = new System.Drawing.Point(741, 766);
+            this.Btn_exit.Location = new System.Drawing.Point(841, 766);
             this.Btn_exit.Name = "Btn_exit";
             this.Btn_exit.Size = new System.Drawing.Size(127, 45);
             this.Btn_exit.TabIndex = 3;
@@ -280,7 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 823);
+            this.ClientSize = new System.Drawing.Size(980, 823);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chkDel);
             this.Controls.Add(this.txt_riga);
