@@ -83,8 +83,13 @@ namespace EmilODA
             //DataTable dt = new DataTable();
             //dt.Load(myReader);
             if (myReader.HasRows)
-                while(myReader.Read())
-                return myReader.GetInt32(0);
+                while (myReader.Read())
+                    try
+                    {
+                        return myReader.GetInt32(0); 
+                    }
+                    catch
+                    { return 0; }
             else
                 return 0;
             DBCONN.Close();
