@@ -431,13 +431,13 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.95834in</Height>
+    <Height>0.99167in</Height>
     <Style />
   </Body>
   <Width>6.62258in</Width>
   <Page>
     <PageHeader>
-      <Height>5.67267cm</Height>
+      <Height>7.66234cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -456,9 +456,9 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox5</rd:DefaultName>
-          <Top>0.22437cm</Top>
-          <Left>9.70703cm</Left>
-          <Height>0.6cm</Height>
+          <Top>3.76301cm</Top>
+          <Left>9.67175cm</Left>
+          <Height>0.4cm</Height>
           <Width>5.14583cm</Width>
           <Style>
             <Border>
@@ -485,9 +485,9 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>1.00076cm</Top>
-          <Left>9.70703cm</Left>
-          <Height>0.6cm</Height>
+          <Top>4.29275cm</Top>
+          <Left>9.70704cm</Left>
+          <Height>0.4cm</Height>
           <Width>5.14583cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -515,9 +515,9 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>1.79889cm</Top>
+          <Top>4.7975cm</Top>
           <Left>9.70704cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.4cm</Height>
           <Width>5.14583cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
@@ -545,9 +545,9 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox16</rd:DefaultName>
-          <Top>0.22437cm</Top>
+          <Top>3.76301cm</Top>
           <Left>6.9342cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.4cm</Height>
           <Width>2.59644cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
@@ -575,9 +575,9 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>2.57528cm</Top>
+          <Top>5.24228cm</Top>
           <Left>6.9342cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.4cm</Height>
           <Width>2.59644cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
@@ -605,9 +605,9 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>2.57528cm</Top>
+          <Top>5.27403cm</Top>
           <Left>9.70703cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.4cm</Height>
           <Width>5.14583cm</Width>
           <ZIndex>5</ZIndex>
           <Style>
@@ -635,9 +635,9 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>2.57528cm</Top>
+          <Top>5.21053cm</Top>
           <Left>14.99397cm</Left>
-          <Height>0.6cm</Height>
+          <Height>0.4cm</Height>
           <Width>1.26294cm</Width>
           <ZIndex>6</ZIndex>
           <Style>
@@ -668,7 +668,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox6</rd:DefaultName>
-          <Top>4.0815cm</Top>
+          <Top>6.304cm</Top>
           <Left>0.30903cm</Left>
           <Height>0.6cm</Height>
           <Width>8.26911cm</Width>
@@ -688,9 +688,9 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           <Value>LOGOELR</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.22437cm</Top>
-          <Left>0.2667cm</Left>
-          <Height>1.37639cm</Height>
-          <Width>1.6364cm</Width>
+          <Left>0.30903cm</Left>
+          <Height>3.59889cm</Height>
+          <Width>3.95904cm</Width>
           <ZIndex>8</ZIndex>
           <Style>
             <Border>
@@ -702,10 +702,9 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
           <Source>Embedded</Source>
           <Value>emidati</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>1.79889cm</Top>
-          <Left>0.30903cm</Left>
-          <Height>1.33406cm</Height>
-          <Width>5.86033cm</Width>
+          <Left>4.60587cm</Left>
+          <Height>3.17556cm</Height>
+          <Width>11.8345cm</Width>
           <ZIndex>9</ZIndex>
           <Style>
             <Border>
@@ -721,7 +720,7 @@ Fields!DRIC.Value.ToString().Substring(4,4)</Value>
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>3.683cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>

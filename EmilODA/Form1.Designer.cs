@@ -35,6 +35,7 @@
             this.btn_modifica = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_cancella = new System.Windows.Forms.Button();
+            this.CMB_Tutti = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,10 +45,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1014, 465);
+            this.dataGridView1.Size = new System.Drawing.Size(1014, 414);
             this.dataGridView1.TabIndex = 0;
             // 
             // Btn_ricarica
@@ -116,11 +117,21 @@
             this.btn_cancella.UseVisualStyleBackColor = true;
             this.btn_cancella.Click += new System.EventHandler(this.btn_cancella_Click);
             // 
+            // CMB_Tutti
+            // 
+            this.CMB_Tutti.FormattingEnabled = true;
+            this.CMB_Tutti.Location = new System.Drawing.Point(12, 21);
+            this.CMB_Tutti.Name = "CMB_Tutti";
+            this.CMB_Tutti.Size = new System.Drawing.Size(392, 24);
+            this.CMB_Tutti.TabIndex = 7;
+            this.CMB_Tutti.SelectedValueChanged += new System.EventHandler(this.CMB_Tutti_SelectedValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 560);
+            this.Controls.Add(this.CMB_Tutti);
             this.Controls.Add(this.btn_cancella);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_modifica);
@@ -145,5 +156,6 @@
         private System.Windows.Forms.Button btn_modifica;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_cancella;
+        private System.Windows.Forms.ComboBox CMB_Tutti;
     }
 }

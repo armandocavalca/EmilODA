@@ -18,6 +18,10 @@ namespace EmilODA
         public Form1()
         {
             InitializeComponent();
+            CMB_Tutti.Items.Add("Tutti");
+            CMB_Tutti.Items.Add("Aperti");
+            CMB_Tutti.Items.Add("Chiusi");
+            CMB_Tutti.Text = "Tutti";
 
         }
 
@@ -41,15 +45,24 @@ namespace EmilODA
 
             myCommand.Connection = DBCONN;
 
-            myCommand.CommandText = "SELECT o.qsta,o.Nord," + 
+            myCommand.CommandText = "SELECT o.qsta,o.Nord," +
                 "concat(concat(substring(o.dord, 7, 2), '/') , " +
                 "concat(concat(substring(o.dord, 5, 2) , '/') , " +
                 "substring(o.dord, 1, 4)))," +
-                " a.acrag1, o.cfor   " + 
-                " FROM $EMIEDATI.oda200f o " + 
+                " a.acrag1, o.cfor   " +
+                " FROM $EMIEDATI.oda200f o " +
                 " left join $d_emil.acf00f a " +
                 " on o.dtip = a.actpcd and o.cfor = a.acscon " +
-                " where o.qsta <> 'X'"+
+                " where o.qsta <> 'X'";
+            if(CMB_Tutti.Text=="Aperti")
+                myCommand.CommandText = myCommand.CommandText +
+                    " and o.qsta in ('I', 'P')";
+
+            if (CMB_Tutti.Text == "Chiusi")
+                myCommand.CommandText = myCommand.CommandText   +
+                    " and o.qsta in ('S')";
+
+                myCommand.CommandText = myCommand.CommandText +
                 " group by o.qsta,o.Nord,o.dord, a.acrag1, o.cfor"; 
 
             iDB2DataReader myReader = myCommand.ExecuteReader();
@@ -179,6 +192,11 @@ namespace EmilODA
                 MessageBox.Show("Selezionare l'ordine da cancellare");
 
             }
+        }
+
+        private void CMB_Tutti_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Ricarica();
         }
     }
 }
